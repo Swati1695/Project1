@@ -24,4 +24,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: MyApp
+  database: myapp_production
+  username: MyApp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
