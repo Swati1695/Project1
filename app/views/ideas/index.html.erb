@@ -1,6 +1,6 @@
 <h1>Listing ideas</h1>
 
-<table>
+<table class="ideas">
   <thead>
     <tr>
       <th>Name</th>
@@ -13,10 +13,13 @@
     <% @ideas.each do |idea| %>
       <tr>
         <td><%= idea.name %></td>
-        <td><%= idea.decsription %></td>
+        <td><%= idea.description %></td>
         <td><%= link_to 'Display', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
         <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Comments', comments_path(idea) %>
+        </td>
       </tr>
     <% end %>
   </tbody>

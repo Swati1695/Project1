@@ -25,5 +25,3 @@ production:
   encoding: unicode
   pool: 5
   database: myapp_production
-  username: MyApp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
